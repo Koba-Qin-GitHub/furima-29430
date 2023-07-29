@@ -13,7 +13,7 @@
                 <mxCell id="6" value="items" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
                     <mxGeometry x="525" y="30" width="160" height="340" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="name&#10;&#10;content&#10;&#10;price&#10;&#10;category_id&#10;&#10;status_id&#10;&#10;delivery_charge_id&#10;&#10;prefecture_id&#10;&#10;shipment_date_id&#10;&#10;user_id&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="6">
+                <mxCell id="7" value="name&#10;&#10;content&#10;&#10;price&#10;&#10;category_id&#10;&#10;status_id&#10;&#10;delivery_charge_id&#10;&#10;prefecture_id&#10;&#10;shipment_date_id&#10;&#10;user&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="6">
                     <mxGeometry y="26" width="160" height="314" as="geometry"/>
                 </mxCell>
                 <mxCell id="22" value="shopping_address_informations" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
@@ -49,8 +49,8 @@
                         <mxPoint x="517.0799999999999" y="213.03200000000004" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="35" value="user_id&#10;&#10;item_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="1">
-                    <mxGeometry x="301" y="428" width="160" height="162" as="geometry"/>
+                <mxCell id="35" value="user&#10;&#10;item" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="303" y="428" width="160" height="162" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
