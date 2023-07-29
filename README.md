@@ -1,7 +1,7 @@
 ## users テーブル
 | Column                    | Type   | Options                   |
 | ------------------------- | ------ | ------------------------- |
-| nickname                  | string | null: false, unique: true |
+| nickname                  | string | null: false               |
 | email                     | string | null: false, unique: true |
 | encrypted_password        | string | null: false               |
 | last_name                 | string | null: false               |
@@ -25,18 +25,19 @@
 | Column                    | Type       | Options                         |
 | ------------------------- | ---------- | ------------------------------- |
 | name                      | string     | null: false                     |
-| text                      | text       | null: false                     |
-| status                    | string     | null: false                     |
+| content                   | text       | null: false                     |
 | price                     | integer    | null: false                     |
-| delivery_charge           | string     | null: false                     |
-| sender_region             | string     | null: false                     |
-| shipment_date             | integer    | null: false                     |
+| category_id               | integer    | null: false                     |
+| status_id                 | integer    | null: false                     |
+| delivery_charge_id        | integer    | null: false                     |
+| sender_region_id          | integer    | null: false                     |
+| shipment_date_id          | integer    | null: false                     |
 | user                      | references | null: false, foreign_key: true  |
 
 
 ### Association
 - belongs_to :user
-- has_one :shopping_logs
+- has_one :shopping_log
 
 
 
@@ -48,12 +49,13 @@
 | Column                    | Type       | Options                         |
 | ------------------------- | ---------- | ------------------------------- |
 | user                      | references | null: false, foreign_key: true  |
+| item                      | references | null: false, foreign_key: true  |
 
 
 ### Association
 - belongs_to :user
-- belongs_to :items
-- has_one :shopping_address_informations
+- belongs_to :item
+- has_one :shopping_address_information
 
 
 
@@ -64,15 +66,16 @@
 
 
 ## shopping_address_informations テーブル
-| Column                    | Type     | Options                   |
-| ------------------------- | -------- | ------------------------- |
-| postcode                  | string   | null: false               |
-| prefecture                | string   | null: false               |
-| city                      | string   | null: false               |
-| block                     | string   | null: false               |
-| building                  | string   | null: false               |
-| phone_number              | integer  | null: false               |
+| Column                    | Type        | Options                         |
+| ------------------------- | ----------- | ------------------------------- |
+| postcode                  | string      | null: false                     |
+| prefecture_id             | integer     | null: false                     |
+| city                      | string      | null: false                     |
+| block                     | string      | null: false                     |
+| building                  | string      |                                 |
+| phone_number              | integer     | null: false                     |
+| shopping_log              | references  | null: false, foreign_key: true  |
 
 
 ### Association
-- belongs_to :shopping_logs
+- belongs_to :shopping_log
