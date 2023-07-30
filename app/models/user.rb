@@ -29,8 +29,8 @@ class User < ApplicationRecord
   
 
        
-  has_many :items
-  has_many :shopping_logs
+  # has_many :items
+  # has_many :shopping_logs
 
 
   
