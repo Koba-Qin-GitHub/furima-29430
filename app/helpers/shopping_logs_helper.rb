@@ -1,0 +1,2 @@
+module ShoppingLogsHelper
+end
