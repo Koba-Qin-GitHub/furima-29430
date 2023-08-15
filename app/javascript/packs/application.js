@@ -8,6 +8,8 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require("channels/item_price")
+require("../channels/card")
+
 
 
 

@@ -14,9 +14,9 @@ class ShoppingLogsController < ApplicationController
     if @shopping_log_address.valid?
       # binding.pry
       @shopping_log_address.save
-      redirect_to root_path
+      # redirect_to root_path
     else
-      render :index
+      # render :index
     end
 
   end
