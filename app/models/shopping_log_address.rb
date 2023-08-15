@@ -1,12 +1,13 @@
 class ShoppingLogAddress
 
   include ActiveModel::Model
-  attr_accessor :postcode, :prefecture_id, :city, :block, :building, :phone_number, :shopping_log_id, :user_id, :item_id
+  attr_accessor :postcode, :prefecture_id, :city, :block, :building, :phone_number, :shopping_log_id, :user_id, :item_id, :token
 
 
   # shopping_log バリデーション
   validates :user_id,          presence: true
   validates :item_id,          presence: true
+  validates :token,            presence: true
 
 
 
