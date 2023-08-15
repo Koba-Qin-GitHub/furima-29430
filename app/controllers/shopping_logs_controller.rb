@@ -1,17 +1,23 @@
 class ShoppingLogsController < ApplicationController
 
   def index
-  
+    set_item
+    @shopping_log_address = ShoppingLogAddress.new
   end
 
-  def new
-
-  end
 
   def create
-    @shopping_log = ShoppingLog.create(shopping_log_params)
-    ShoppingAddressInformation.create(shopping_address_information_params)
-    redirect_to root_path
+    set_item
+    # binding.pry
+    @shopping_log_address = ShoppingLogAddress.new(shopping_log_params)
+    
+    if @shopping_log_address.valid?
+      # binding.pry
+      @shopping_log_address.save
+      redirect_to root_path
+    else
+      render :index
+    end
 
   end
 
@@ -20,11 +26,11 @@ class ShoppingLogsController < ApplicationController
   private
 
   def shopping_log_params
-    params.permit(:price).merge(user_id: current_user.id)
+    params.require(:shopping_log_address).permit(:postcode, :prefecture_id, :city, :block, :building, :phone_number).merge(user_id: current_user.id, item_id: @item.id)
   end
 
-  def shopping_address_information_params
-    params.permit(:postcode, :prefecture_id, :city, :block, :building, :phone_number).merge(shopping_log_id: @shopping_log.id)
+  def set_item
+    @item = Item.find(params[:item_id])
   end
 
 end

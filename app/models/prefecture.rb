@@ -21,5 +21,6 @@ class Prefecture < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :items
+  has_many :shopping_log_addresses
 
   end
