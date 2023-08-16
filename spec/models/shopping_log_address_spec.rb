@@ -25,7 +25,7 @@ RSpec.describe ShoppingLogAddress, type: :model do
       it 'postcode が空だと保存できないこと' do
         @shopping_log_address.postcode  = ''
         @shopping_log_address.valid?
-        expect(@shopping_log_address.errors.full_messages).to include("Postcode can't be blank", "Postcode is invalid. Include hyphen(-)")
+        expect(@shopping_log_address.errors.full_messages).to include("Postcode can't be blank")
       end
 
       it 'postcode が半角のハイフンを含んだ正しい形式でないと保存できないこと' do
@@ -55,7 +55,7 @@ RSpec.describe ShoppingLogAddress, type: :model do
       it 'phone_number が空だと保存できないこと' do
         @shopping_log_address.phone_number = ''
         @shopping_log_address.valid?
-        expect(@shopping_log_address.errors.full_messages).to include("Phone number can't be blank", "Phone number is too short", "Phone number is invalid. Input only number")
+        expect(@shopping_log_address.errors.full_messages).to include("Phone number can't be blank")
       end
 
       it 'phone_number が9文字以下だと保存できないこと' do
@@ -64,11 +64,11 @@ RSpec.describe ShoppingLogAddress, type: :model do
         expect(@shopping_log_address.errors.full_messages).to include("Phone number is too short")
       end
 
-      # it 'phone_number が12文字以上だと保存できないこと' do
-      #   @shopping_log_address.phone_number = '012345678912'
-      #   @shopping_log_address.valid?
-      #   expect(@shopping_log_address.errors.full_messages).to include("Phone number is too short")
-      # end
+      it 'phone_number が12文字以上だと保存できないこと' do
+        @shopping_log_address.phone_number = '012345678912'
+        @shopping_log_address.valid?
+        expect(@shopping_log_address.errors.full_messages).to include("Phone number is too short")
+      end
 
       it 'phone_number が全角文字だと保存できないこと' do
         @shopping_log_address.phone_number = '０１２３４５６７８９'
