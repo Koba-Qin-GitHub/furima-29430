@@ -43,7 +43,6 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
-  gem 'mail', '2.7.1'
 
 end
 
@@ -84,3 +83,4 @@ gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'payjp'
 gem "aws-sdk-s3", require: false
+gem 'mail', '2.7.1'
