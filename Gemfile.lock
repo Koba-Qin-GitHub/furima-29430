@@ -166,7 +166,6 @@ GEM
     mime-types-data (3.2023.0808)
     mini_magick (4.12.0)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.4)
     minitest (5.19.0)
     msgpack (1.7.2)
     mysql2 (0.5.5)
@@ -175,8 +174,7 @@ GEM
     net-ssh (7.2.0)
     netrc (0.11.0)
     nio4r (2.5.9)
-    nokogiri (1.13.10)
-      mini_portile2 (~> 2.8.0)
+    nokogiri (1.13.10-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.23.0)
@@ -344,7 +342,7 @@ GEM
     zeitwerk (2.6.11)
 
 PLATFORMS
-  ruby
+  x86_64-darwin-22
 
 DEPENDENCIES
   active_hash
@@ -388,4 +386,4 @@ RUBY VERSION
    ruby 2.6.5p114
 
 BUNDLED WITH
-   2.1.4
+   2.4.19
